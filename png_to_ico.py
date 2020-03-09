@@ -1,11 +1,30 @@
 from PIL import Image
 
-fn_input = input("Enter the full path and filename of the image file: ")
-# TODO input validation and error handling
+import os
+import sys
+from os.path import dirname, abspath, realpath
 
-fn = r"{}".format(fn_input)
+dir = dirname(realpath(__file__))
 
-fn = r"C:\Users\Ben\Desktop\Internal Tools\png-icons-4.png"
+in_dir = dir + r"\dropfolder"
 
-img = Image.open(fn)
-img.save('test.ico')
+outfolder = dir + r"\outfolder"
+
+filenames = []
+
+for filename in os.listdir(in_dir):
+    filenames.append(filename)
+
+if len(filenames) > 1:
+    print("There is more than one file in the inputs dropfolder--there are {}\
+        files".format(len(filenames)))
+
+for fn in filenames:
+    if not(fn.endswith('.ico')):
+        ico_fn = r"{}\{}ico".format(outfolder, fn.rstrip('png'))
+        fn = r"{}\{}".format(in_dir, fn)
+        img = Image.open(fn)
+        img.save(ico_fn)
+        print("Saved {}".format(ico_fn))
+
+    
