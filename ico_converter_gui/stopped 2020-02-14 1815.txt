@@ -1,0 +1,1 @@
+Not a good/focused use of time, and not going to look esp smart to have just weirdly copied from the tkinter book. Experiment was to try slapping together a tkinter app super fast--tkinter is too rusty right now, so the experiment failed. 
