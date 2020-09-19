@@ -17,7 +17,7 @@ for filename in os.listdir(in_dir):
 
 if len(filenames) > 1:
     print("There is more than one file in the inputs dropfolder--there are {}\
-        files".format(len(filenames)))
+files".format(len(filenames)))
 
 for fn in filenames:
     if not(fn.endswith('.ico')):
