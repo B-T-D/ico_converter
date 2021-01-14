@@ -1,2 +1,0 @@
-- Only have one file in the dropfolder at a time
-- Converted .ico will appear in "outfolder"
