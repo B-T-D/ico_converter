@@ -1,8 +1,8 @@
-from PIL import Image
-
 import os
 import sys
 from os.path import dirname, abspath, realpath
+
+from PIL import Image
 
 dir = dirname(realpath(__file__))
 
@@ -18,6 +18,8 @@ for filename in os.listdir(in_dir):
 if len(filenames) > 1:
     print("There is more than one file in the inputs dropfolder--there are {}\
 files".format(len(filenames)))
+else:
+    print(f"No files found in {in_dir}. Create the directory and/or place PNGs in it.")
 
 for fn in filenames:
     if not(fn.endswith('.ico')):
